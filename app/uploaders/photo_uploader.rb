@@ -7,4 +7,5 @@ class PhotoUploader < CarrierWave::Uploader::Base
 
   version :thumnail do
     resize_to_fit 256, 256
+  end
 end
