@@ -1,5 +1,6 @@
 <%= simple_form_for [cocktail, dose] do |f| %>
 <%= f.input :description%>
-<%= f.association :ingredient, as: :search %>
+<%= f.association :ingredient  %>
+<!-- <input type="text" name='ingredient_suggestion'> -->
 <%= f.submit class: 'btn btn-warning' %>
 <% end %>
