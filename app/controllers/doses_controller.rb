@@ -6,7 +6,8 @@ class DosesController < ApplicationController
   end
 
   def create
-    @dose = Dose.new(description: params[:dose][:description], ingredient: set_ingredient)
+
+    @dose = Dose.new(description: params[:dose][:description], ingredient_id: params[:dose][:ingredient_id])
     @dose.cocktail = @cocktail
     if @dose.save
       redirect_to cocktail_path(@dose.cocktail)
